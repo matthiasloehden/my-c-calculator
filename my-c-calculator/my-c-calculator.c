@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int getConfirmationAndClearConsole()
+int getConfirmation()
 {
 	printf("Press Enter to continue or (n) to exit...\n");
 
@@ -16,7 +16,6 @@ int getConfirmationAndClearConsole()
 			break;
 		}
 	}
-
 
 	system("cls");
 
@@ -79,7 +78,7 @@ int runCalculator()
 
 	printf("You selected: %s.\n", operations[operation]);
 
-	if (!getConfirmationAndClearConsole()) return 0;
+	if (!getConfirmation()) return 0;
 
 	printf("Now, let's get the numbers for the %s operation.\n", operations[operation]);
 
@@ -89,7 +88,7 @@ int runCalculator()
 
 	printf("You entered: %d and %d. Press Enter to continue with the %s operation.\n", firstNumber, secondNumber, operations[operation]);
 
-	if (!getConfirmationAndClearConsole()) return 0;
+	if (!getConfirmation()) return 0;
 
 	printf("Performing the %s operation on %d and %d...\n\n", operations[operation], firstNumber, secondNumber);
 
@@ -119,7 +118,7 @@ int runCalculator()
 
 	printf("\nHuge Success!\n\n");
 
-	if (!getConfirmationAndClearConsole()) return 0;
+	if (!getConfirmation()) return 0;
 
 	return 1;
 }
@@ -128,7 +127,7 @@ int main()
 {
 	printf("Welcome to the serious Calculator console app!\n");
 
-	if (!getConfirmationAndClearConsole()) return 0;
+	if (!getConfirmation()) return 0;
 
 	while (runCalculator()) {}
 
